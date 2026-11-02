@@ -1,0 +1,68 @@
+// ==============================================================================
+// PharmaPulse™ Enterprise - DAX Measures Library
+// Module: 03_portfolio_contribution.dax
+// Description: Product mix contribution, Pareto concentration & dominant share metrics
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// Measure: [N02BE Paracetamol Share %]
+// Table: WeeklySales / MonthlySales
+// Description: Dominance index of Paracetamol relative to total portfolio volume.
+// ------------------------------------------------------------------------------
+[N02BE Paracetamol Share %] = 
+DIVIDE(
+    SUM(MonthlySales[N02BE]),
+    [Total Monthly Sales],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [M01AE Ibuprofen Share %]
+// Description: Share of second-largest therapy (Propionic acid NSAIDs).
+// ------------------------------------------------------------------------------
+[M01AE Ibuprofen Share %] = 
+DIVIDE(
+    SUM(MonthlySales[M01AE]),
+    [Total Monthly Sales],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [Respiratory (R03) Allergy (R06) Combined Share %]
+// Description: Total respiratory & ENT seasonal demand elasticity index.
+// ------------------------------------------------------------------------------
+[Respiratory & Allergy Combined Share %] = 
+DIVIDE(
+    SUM(MonthlySales[R03]) + SUM(MonthlySales[R06]),
+    [Total Monthly Sales],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [CNS Therapeutics Share %]
+// Description: Regulated psycholeptic demand (Anxiolytics N05B + Hypnotics N05C).
+// ------------------------------------------------------------------------------
+[CNS Therapeutics Share %] = 
+DIVIDE(
+    SUM(MonthlySales[N05B]) + SUM(MonthlySales[N05C]),
+    [Total Monthly Sales],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [N02BE Gauge Needle Value]
+// Description: Dynamic indicator for Gauge visual (Actual N02BE weekly sales).
+// ------------------------------------------------------------------------------
+[Gauge_N02BE_Weekly_Actual] = SUM(WeeklySales[N02BE])
+
+// ------------------------------------------------------------------------------
+// Measure: [Gauge Min Floor Baseline]
+// Description: Baseline lower-bound comparison (Diclofenac weekly sales).
+// ------------------------------------------------------------------------------
+[Gauge_Min_Floor_Baseline] = SUM(WeeklySales[M01AB])
+
+// ------------------------------------------------------------------------------
+// Measure: [Gauge Max Ceiling Capacity]
+// Description: Upper-bound capacity benchmark (Total Weekly Sales).
+// ------------------------------------------------------------------------------
+[Gauge_Max_Ceiling_Capacity] = [Total Weekly Sales]

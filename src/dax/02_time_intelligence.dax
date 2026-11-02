@@ -1,0 +1,98 @@
+// ==============================================================================
+// PharmaPulse™ Enterprise - DAX Measures Library
+// Module: 02_time_intelligence.dax
+// Description: Advanced time-series, period-over-period variance, and moving averages
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// Measure: [Previous Month Sales]
+// Table: DateTable
+// Description: Benchmark target volume from previous calendar month using DATEADD.
+// ------------------------------------------------------------------------------
+[Previous Month Sales] = 
+CALCULATE(
+    [Total Monthly Sales],
+    DATEADD('DateTable'[Date], -1, MONTH)
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [MoM Sales Growth (Units)]
+// Description: Net unit volume difference between current month and previous month.
+// ------------------------------------------------------------------------------
+[MoM Sales Growth Units] = 
+VAR CurrentSales = [Total Monthly Sales]
+VAR PriorSales = [Previous Month Sales]
+RETURN
+    IF(
+        NOT ISBLANK(CurrentSales) && NOT ISBLANK(PriorSales),
+        CurrentSales - PriorSales,
+        BLANK()
+    )
+
+// ------------------------------------------------------------------------------
+// Measure: [MoM Sales Growth %]
+// Description: Percentage rate of monthly demand change with safe division handling.
+// ------------------------------------------------------------------------------
+[MoM Sales Growth %] = 
+VAR CurrentSales = [Total Monthly Sales]
+VAR PriorSales = [Previous Month Sales]
+RETURN
+    DIVIDE(CurrentSales - PriorSales, PriorSales, 0)
+
+// ------------------------------------------------------------------------------
+// Measure: [Previous Week Sales]
+// Table: DateTable
+// Description: Benchmark volume from prior calendar week for tactical WoW tracking.
+// ------------------------------------------------------------------------------
+[Previous Week Sales] = 
+CALCULATE(
+    [Total Weekly Sales],
+    DATEADD('DateTable'[Date], -7, DAY)
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [WoW Sales Growth %]
+// Description: Week-over-Week percentage change in tactical dispensary velocity.
+// ------------------------------------------------------------------------------
+[WoW Sales Growth %] = 
+VAR CurrentWeekly = [Total Weekly Sales]
+VAR PriorWeekly = [Previous Week Sales]
+RETURN
+    DIVIDE(CurrentWeekly - PriorWeekly, PriorWeekly, 0)
+
+// ------------------------------------------------------------------------------
+// Measure: [Same Period Last Year (YoY)]
+// Description: Equivalent monthly volume 12 months prior for annual seasonality audit.
+// ------------------------------------------------------------------------------
+[Sales Same Period SPLY] = 
+CALCULATE(
+    [Total Monthly Sales],
+    SAMEPERIODLASTYEAR('DateTable'[Date])
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [YoY Sales Growth %]
+// Description: Annualized demand trajectory benchmarking.
+// ------------------------------------------------------------------------------
+[YoY Sales Growth %] = 
+VAR CurrentSales = [Total Monthly Sales]
+VAR SPLY_Sales = [Sales Same Period SPLY]
+RETURN
+    DIVIDE(CurrentSales - SPLY_Sales, SPLY_Sales, 0)
+
+// ------------------------------------------------------------------------------
+// Measure: [Trailing 3-Month Moving Average]
+// Description: Smooths out intra-quarter inventory replenishment anomalies.
+// ------------------------------------------------------------------------------
+[Trailing 3M Moving Average] = 
+CALCULATE(
+    AVERAGEX(
+        DATESINPERIOD(
+            'DateTable'[Date],
+            LASTDATE('DateTable'[Date]),
+            -3,
+            MONTH
+        ),
+        [Total Monthly Sales]
+    )
+)

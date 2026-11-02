@@ -1,0 +1,62 @@
+// ==============================================================================
+// PharmaPulse™ Enterprise - DAX Measures Library
+// Module: 01_base_measures.dax
+// Description: Core multi-table aggregation measures across ATC drug categories
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// Measure: [Total Monthly Sales]
+// Table: MonthlySales
+// Description: Cumulative monthly units sold across all 8 WHO ATC therapeutic classes.
+// ------------------------------------------------------------------------------
+[Total Monthly Sales] = 
+SUM(MonthlySales[M01AB]) + 
+SUM(MonthlySales[M01AE]) + 
+SUM(MonthlySales[N02BA]) + 
+SUM(MonthlySales[N02BE]) + 
+SUM(MonthlySales[N05B])  + 
+SUM(MonthlySales[N05C])  + 
+SUM(MonthlySales[R03])   + 
+SUM(MonthlySales[R06])
+
+// ------------------------------------------------------------------------------
+// Measure: [Total Weekly Sales]
+// Table: WeeklySales
+// Description: Cumulative weekly point-of-sale volume across all 8 therapeutic classes.
+// ------------------------------------------------------------------------------
+[Total Weekly Sales] = 
+SUM(WeeklySales[M01AB]) + 
+SUM(WeeklySales[M01AE]) + 
+SUM(WeeklySales[N02BA]) + 
+SUM(WeeklySales[N02BE]) + 
+SUM(WeeklySales[N05B])  + 
+SUM(WeeklySales[N05C])  + 
+SUM(WeeklySales[R03])   + 
+SUM(WeeklySales[R06])
+
+// ------------------------------------------------------------------------------
+// Measure: [Total Daily Sales]
+// Table: DailySales
+// Description: Cumulative daily POS transaction volume across all 8 therapeutic classes.
+// ------------------------------------------------------------------------------
+[Total Daily Sales] = 
+SUM(DailySales[M01AB]) + 
+SUM(DailySales[M01AE]) + 
+SUM(DailySales[N02BA]) + 
+SUM(DailySales[N02BE]) + 
+SUM(DailySales[N05B])  + 
+SUM(DailySales[N05C])  + 
+SUM(DailySales[R03])   + 
+SUM(DailySales[R06])
+
+// ------------------------------------------------------------------------------
+// Individual Class Subtotal Measures (Enterprise Best Practice)
+// ------------------------------------------------------------------------------
+[Sales_M01AB_Diclofenac] = SUM(MonthlySales[M01AB])
+[Sales_M01AE_Ibuprofen]  = SUM(MonthlySales[M01AE])
+[Sales_N02BA_Aspirin]    = SUM(MonthlySales[N02BA])
+[Sales_N02BE_Paracetamol]= SUM(MonthlySales[N02BE])
+[Sales_N05B_Anxiolytics] = SUM(MonthlySales[N05B])
+[Sales_N05C_Hypnotics]   = SUM(MonthlySales[N05C])
+[Sales_R03_AsthmaCOPD]   = SUM(MonthlySales[R03])
+[Sales_R06_Antihistamine]= SUM(MonthlySales[R06])

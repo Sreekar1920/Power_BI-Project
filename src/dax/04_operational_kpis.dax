@@ -1,0 +1,71 @@
+// ==============================================================================
+// PharmaPulse™ Enterprise - DAX Measures Library
+// Module: 04_operational_kpis.dax
+// Description: Operational field metrics, peak hour clustering & dynamic formatting
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// Measure: [Peak Hour Prescription Volume]
+// Description: Maximum hourly transaction volume observed in the filtered context.
+// ------------------------------------------------------------------------------
+[Peak Hour Daily Volume] = 
+MAXX(
+    VALUES(DailySales[Hour]),
+    CALCULATE([Total Daily Sales])
+)
+
+// ------------------------------------------------------------------------------
+// Measure: [Peak Hour Concentration Ratio %]
+// Description: Ratio of top 3 operating hours (11:00, 14:00, 17:00) vs full day volume.
+// ------------------------------------------------------------------------------
+[Peak Hours Concentration Ratio %] = 
+VAR PeakHoursVolume = 
+    CALCULATE(
+        [Total Daily Sales],
+        DailySales[Hour] IN {11, 14, 17}
+    )
+RETURN
+    DIVIDE(PeakHoursVolume, [Total Daily Sales], 0)
+
+// ------------------------------------------------------------------------------
+// Measure: [Weekend Volume Share %]
+// Description: Percentage of total sales occurring on Saturday & Sunday.
+// ------------------------------------------------------------------------------
+[Weekend Volume Share %] = 
+VAR WeekendVolume = 
+    CALCULATE(
+        [Total Daily Sales],
+        DailySales[Weekday Name] IN {"Saturday", "Sunday"}
+    )
+RETURN
+    DIVIDE(WeekendVolume, [Total Daily Sales], 0)
+
+// ------------------------------------------------------------------------------
+// Measure: [MoM KPI Status Color]
+// Description: Dynamic hex code for conditional formatting cards & indicators.
+// ------------------------------------------------------------------------------
+[MoM KPI Status Color] = 
+VAR MoMGrowth = [MoM Sales Growth %]
+RETURN
+    SWITCH(
+        TRUE(),
+        MoMGrowth >= 0.05, "#10B981",  // Emerald Green (> +5%)
+        MoMGrowth >= 0.00, "#38BDF8",  // Sky Blue (0% to +5%)
+        MoMGrowth >= -0.05, "#F59E0B", // Amber Warning (-5% to 0%)
+        "#F43F5E"                      // Rose Red Alert (< -5%)
+    )
+
+// ------------------------------------------------------------------------------
+// Measure: [MoM KPI Icon]
+// Description: Dynamic Unicode indicator for executive display cards.
+// ------------------------------------------------------------------------------
+[MoM KPI Icon] = 
+VAR MoMGrowth = [MoM Sales Growth %]
+RETURN
+    SWITCH(
+        TRUE(),
+        MoMGrowth >= 0.05, "▲ Strong Growth",
+        MoMGrowth >= 0.00, "▲ Steady Expansion",
+        MoMGrowth >= -0.05, "▼ Minor Contraction",
+        "▼ Critical Decline"
+    )
