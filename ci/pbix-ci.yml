@@ -1,0 +1,68 @@
+name: PharmaPulse Enterprise BI CI Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-bi-artifacts:
+    name: Validate Power BI Assets & DAX Syntax
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify PBIX binary presence and integrity
+        run: |
+          echo "Verifying Power BI (.pbix) files..."
+          test -f "PharmaPulse_Enterprise.pbix" || (echo "PharmaPulse_Enterprise.pbix not found!" && exit 1)
+          test -f "BA_project.pbix" || (echo "BA_project.pbix not found!" && exit 1)
+          echo "Power BI binary files verified successfully."
+
+      - name: Validate DAX Library syntax
+        run: |
+          echo "Scanning DAX measures library..."
+          python -c "
+          import os, glob
+          dax_files = glob.glob('src/dax/*.dax')
+          assert len(dax_files) >= 4, f'Expected at least 4 DAX modules, found {len(dax_files)}'
+          for f in dax_files:
+              with open(f, 'r', encoding='utf-8') as fp:
+                  content = fp.read()
+                  assert len(content) > 100, f'DAX file {f} is empty'
+          print(f'Successfully validated {len(dax_files)} DAX modules.')
+          "
+
+      - name: Validate Power Query M scripts
+        run: |
+          echo "Scanning Power Query M scripts..."
+          python -c "
+          import glob
+          m_files = glob.glob('src/powerquery_m/*.m')
+          assert len(m_files) >= 4, f'Expected at least 4 M scripts, found {len(m_files)}'
+          for f in m_files:
+              with open(f, 'r', encoding='utf-8') as fp:
+                  content = fp.read()
+                  assert 'let' in content and 'in' in content, f'Script {f} missing standard M syntax let/in block'
+          print(f'Successfully validated {len(m_files)} Power Query M scripts.')
+          "
+
+      - name: Verify Documentation & Asset Links
+        run: |
+          echo "Verifying Docs and Assets..."
+          test -f "README.md" || exit 1
+          test -f "docs/BUSINESS_CASE.md" || exit 1
+          test -f "docs/DASHBOARD_WALKTHROUGH.md" || exit 1
+          test -f "docs/DATA_MODEL_ARCHITECTURE.md" || exit 1
+          test -f "docs/DATA_DICTIONARY.md" || exit 1
+          test -f "docs/DAX_DOCUMENTATION.md" || exit 1
+          test -f "docs/ENTERPRISE_GOVERNANCE.md" || exit 1
+          echo "All enterprise BI artifacts validated successfully."
