@@ -1,0 +1,21 @@
+Table,Column,DataType,Classification,Clinical_Indication,Description
+DateTable,Date,Date,Dimension PK,Conformed Calendar,Primary date key representing single calendar day
+DateTable,Year,Integer,Dimension Attribute,Temporal Hierarchy,Calendar year (2014-2019)
+DateTable,Month,Text,Dimension Attribute,Temporal Hierarchy,3-letter calendar month name (Jan - Dec)
+DateTable,Quarter,Text,Dimension Attribute,Temporal Hierarchy,Calendar Quarter (Q1 - Q4)
+DateTable,Day,Integer,Dimension Attribute,Temporal Hierarchy,Day of month (1-31)
+DateTable,Weekday Name,Text,Dimension Attribute,Operational Attribute,Day name (Monday - Sunday)
+MonthlySales,datum,Date,Fact FK,Calendar Link,First day of reporting calendar month
+MonthlySales,M01AB,Decimal,Fact Measure,Anti-inflammatory (Acetic acid),Sales volume for Diclofenac / Aceclofenac products
+MonthlySales,M01AE,Decimal,Fact Measure,Anti-inflammatory (Propionic acid),Sales volume for Ibuprofen / Naproxen products
+MonthlySales,N02BA,Decimal,Fact Measure,Analgesics (Salicylic acid),Sales volume for Aspirin / Acetylsalicylic acid
+MonthlySales,N02BE,Decimal,Fact Measure,Analgesics (Anilides),Sales volume for Paracetamol / Acetaminophen (Dominant OTC)
+MonthlySales,N05B,Decimal,Fact Measure,Psycholeptics (Anxiolytics),Sales volume for anti-anxiety therapeutics (Diazepam, etc.)
+MonthlySales,N05C,Decimal,Fact Measure,Psycholeptics (Hypnotics),Sales volume for sedative & sleep therapeutics
+MonthlySales,R03,Decimal,Fact Measure,Respiratory / Obstructive Airway,Sales volume for Asthma / COPD inhalers (Salbutamol)
+MonthlySales,R06,Decimal,Fact Measure,Antihistamines Systemic,Sales volume for allergy therapeutics (Cetirizine, Loratadine)
+WeeklySales,datum,Date,Fact FK,Calendar Link,Start date of reporting calendar week (W01 - W52)
+DailySales,datum,Date,Fact FK,Calendar Link,Transaction date stamp
+DailySales,Hour,Integer,Fact Attribute,Operational Attribute,Hour of transaction (0-23)
+DailySales,Weekday Name,Text,Fact Attribute,Operational Attribute,Day of transaction (Monday-Sunday)
+DailySales,Year,Integer,Fact Attribute,Cohort Attribute,Transaction calendar year

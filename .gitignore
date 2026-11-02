@@ -1,0 +1,24 @@
+# Power BI temporary & cache files
+*.tmp
+*.temp
+*~$*
+~*.pbix
+~*.pbit
+
+# Auto-recovery files
+AutoRecovery/
+*.bak
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Windows system
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OS metadata
+.DS_Store
