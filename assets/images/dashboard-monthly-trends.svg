@@ -1,0 +1,324 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bgGrad)" />
+
+  <!-- Navigation / Top Header Bar -->
+  <rect x="0" y="0" width="1280" height="64" fill="#0b1120" />
+  <circle cx="36" cy="32" r="14" fill="#3b82f6" />
+  <path d="M30 32 L34 36 L43 27" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <text x="62" y="38" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="0.5">PharmaPulse™ Enterprise</text>
+  <text x="310" y="37" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14">|</text>
+  <rect x="330" y="20" width="160" height="26" rx="13" fill="#1e293b" />
+  <text x="345" y="37" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">PAGE 1: Monthly Trends</text>
+
+  <!-- Global Filter Breadcrumb Indicator -->
+  <rect x="860" y="18" width="390" height="28" rx="6" fill="#1e293b" />
+  <text x="875" y="36" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Hierarchy: Date (Year > Quarter > Month) • ATC Classes: All (8)</text>
+
+  <!-- ================= GRID CONTAINER ================= -->
+
+  <!-- [Visual 2] Top-Left Combo Chart: Line Clustered Column -->
+  <g transform="translate(24, 80)" filter="url(#shadow)">
+    <rect width="400" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Monthly Sales Trend &amp; Seasonality</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Total Monthly Sales by Date Hierarchy (Year / Qtr / Month)</text>
+    
+    <!-- Y-Axis Grid lines -->
+    <line x1="45" y1="80" x2="375" y2="80" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="35" y="84" fill="#64748b" font-size="9" text-anchor="end">12K</text>
+    <line x1="45" y1="130" x2="375" y2="130" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="35" y="134" fill="#64748b" font-size="9" text-anchor="end">8K</text>
+    <line x1="45" y1="180" x2="375" y2="180" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="35" y="184" fill="#64748b" font-size="9" text-anchor="end">4K</text>
+    <line x1="45" y1="230" x2="375" y2="230" stroke="#475569" />
+    <text x="35" y="234" fill="#64748b" font-size="9" text-anchor="end">0</text>
+
+    <!-- Bars -->
+    <rect x="60" y="110" width="28" height="120" rx="3" fill="#3b82f6" opacity="0.85" />
+    <rect x="110" y="135" width="28" height="95" rx="3" fill="#3b82f6" opacity="0.85" />
+    <rect x="160" y="95" width="28" height="135" rx="3" fill="#3b82f6" opacity="0.85" />
+    <rect x="210" y="120" width="28" height="110" rx="3" fill="#3b82f6" opacity="0.85" />
+    <rect x="260" y="80" width="28" height="150" rx="3" fill="#3b82f6" opacity="0.85" />
+    <rect x="310" y="105" width="28" height="125" rx="3" fill="#3b82f6" opacity="0.85" />
+
+    <!-- Trend Line -->
+    <path d="M 74 105 L 124 130 L 174 90 L 224 115 L 274 75 L 324 100" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <circle cx="74" cy="105" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="124" cy="130" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="174" cy="90" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="224" cy="115" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="274" cy="75" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <circle cx="324" cy="100" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+
+    <!-- X-Axis Labels -->
+    <text x="74" y="250" fill="#94a3b8" font-size="10" text-anchor="middle">2014</text>
+    <text x="124" y="250" fill="#94a3b8" font-size="10" text-anchor="middle">2015</text>
+    <text x="174" y="250" fill="#94a3b8" font-size="10" text-anchor="middle">2016</text>
+    <text x="224" y="250" fill="#94a3b8" font-size="10" text-anchor="middle">2017</text>
+    <text x="274" y="250" fill="#94a3b8" font-size="10" text-anchor="middle">2018</text>
+    <text x="324" y="250" fill="#94a3b8" font-size="10" text-anchor="middle">2019</text>
+    
+    <text x="20" y="282" fill="#38bdf8" font-size="11" font-weight="600">● Bar: Gross Volume | Line: Trailing Mean</text>
+  </g>
+
+  <!-- [Visual 3] Top-Right: 100% Stacked Column Chart: Sales by drug class -->
+  <g transform="translate(444, 80)" filter="url(#shadow)">
+    <rect width="812" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="24" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Sales by Drug Class (Portfolio Mix % by Month)</text>
+    <text x="24" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">100% Stacked Composition across 8 WHO Anatomical Therapeutic Chemical (ATC) Groups</text>
+    
+    <!-- Legend -->
+    <g transform="translate(24, 62)" font-size="10" font-family="sans-serif">
+      <rect x="0" y="0" width="10" height="10" rx="2" fill="#f43f5e" /><text x="15" y="9" fill="#e2e8f0">N02BE (Paracetamol)</text>
+      <rect x="140" y="0" width="10" height="10" rx="2" fill="#3b82f6" /><text x="155" y="9" fill="#e2e8f0">M01AE (Ibuprofen)</text>
+      <rect x="270" y="0" width="10" height="10" rx="2" fill="#10b981" /><text x="285" y="9" fill="#e2e8f0">R03 (Asthma)</text>
+      <rect x="375" y="0" width="10" height="10" rx="2" fill="#f59e0b" /><text x="390" y="9" fill="#e2e8f0">M01AB (Diclofenac)</text>
+      <rect x="505" y="0" width="10" height="10" rx="2" fill="#8b5cf6" /><text x="520" y="9" fill="#e2e8f0">N02BA (Aspirin)</text>
+      <rect x="620" y="0" width="10" height="10" rx="2" fill="#06b6d4" /><text x="635" y="9" fill="#e2e8f0">Others (N05B/C, R06)</text>
+    </g>
+
+    <!-- 100% Stacked Bars (12 Months Jan-Dec) -->
+    <!-- Helper loop generated bars -->
+    <g transform="translate(50, 85)">
+      <!-- Jan -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="46" height="65" fill="#f43f5e" />
+        <rect x="0" y="65" width="46" height="35" fill="#3b82f6" />
+        <rect x="0" y="100" width="46" height="25" fill="#10b981" />
+        <rect x="0" y="125" width="46" height="20" fill="#f59e0b" />
+        <rect x="0" y="145" width="46" height="12" fill="#8b5cf6" />
+        <rect x="0" y="157" width="46" height="18" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Jan</text>
+      </g>
+      <!-- Feb -->
+      <g transform="translate(60, 0)">
+        <rect x="0" y="0" width="46" height="70" fill="#f43f5e" />
+        <rect x="0" y="70" width="46" height="32" fill="#3b82f6" />
+        <rect x="0" y="102" width="46" height="23" fill="#10b981" />
+        <rect x="0" y="125" width="46" height="22" fill="#f59e0b" />
+        <rect x="0" y="147" width="46" height="11" fill="#8b5cf6" />
+        <rect x="0" y="158" width="46" height="17" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Feb</text>
+      </g>
+      <!-- Mar -->
+      <g transform="translate(120, 0)">
+        <rect x="0" y="0" width="46" height="62" fill="#f43f5e" />
+        <rect x="0" y="62" width="46" height="36" fill="#3b82f6" />
+        <rect x="0" y="98" width="46" height="28" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="21" fill="#f59e0b" />
+        <rect x="0" y="147" width="46" height="12" fill="#8b5cf6" />
+        <rect x="0" y="159" width="46" height="16" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Mar</text>
+      </g>
+      <!-- Apr -->
+      <g transform="translate(180, 0)">
+        <rect x="0" y="0" width="46" height="60" fill="#f43f5e" />
+        <rect x="0" y="60" width="46" height="35" fill="#3b82f6" />
+        <rect x="0" y="95" width="46" height="32" fill="#10b981" />
+        <rect x="0" y="127" width="46" height="20" fill="#f59e0b" />
+        <rect x="0" y="147" width="46" height="13" fill="#8b5cf6" />
+        <rect x="0" y="160" width="46" height="15" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Apr</text>
+      </g>
+      <!-- May -->
+      <g transform="translate(240, 0)">
+        <rect x="0" y="0" width="46" height="58" fill="#f43f5e" />
+        <rect x="0" y="58" width="46" height="38" fill="#3b82f6" />
+        <rect x="0" y="96" width="46" height="30" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="22" fill="#f59e0b" />
+        <rect x="0" y="148" width="46" height="12" fill="#8b5cf6" />
+        <rect x="0" y="160" width="46" height="15" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">May</text>
+      </g>
+      <!-- Jun -->
+      <g transform="translate(300, 0)">
+        <rect x="0" y="0" width="46" height="55" fill="#f43f5e" />
+        <rect x="0" y="55" width="46" height="40" fill="#3b82f6" />
+        <rect x="0" y="95" width="46" height="31" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="23" fill="#f59e0b" />
+        <rect x="0" y="149" width="46" height="11" fill="#8b5cf6" />
+        <rect x="0" y="160" width="46" height="15" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Jun</text>
+      </g>
+      <!-- Jul -->
+      <g transform="translate(360, 0)">
+        <rect x="0" y="0" width="46" height="56" fill="#f43f5e" />
+        <rect x="0" y="56" width="46" height="39" fill="#3b82f6" />
+        <rect x="0" y="95" width="46" height="29" fill="#10b981" />
+        <rect x="0" y="124" width="46" height="24" fill="#f59e0b" />
+        <rect x="0" y="148" width="46" height="12" fill="#8b5cf6" />
+        <rect x="0" y="160" width="46" height="15" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Jul</text>
+      </g>
+      <!-- Aug -->
+      <g transform="translate(420, 0)">
+        <rect x="0" y="0" width="46" height="54" fill="#f43f5e" />
+        <rect x="0" y="54" width="46" height="41" fill="#3b82f6" />
+        <rect x="0" y="95" width="46" height="30" fill="#10b981" />
+        <rect x="0" y="125" width="46" height="22" fill="#f59e0b" />
+        <rect x="0" y="147" width="46" height="12" fill="#8b5cf6" />
+        <rect x="0" y="159" width="46" height="16" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Aug</text>
+      </g>
+      <!-- Sep -->
+      <g transform="translate(480, 0)">
+        <rect x="0" y="0" width="46" height="59" fill="#f43f5e" />
+        <rect x="0" y="59" width="46" height="36" fill="#3b82f6" />
+        <rect x="0" y="95" width="46" height="31" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="21" fill="#f59e0b" />
+        <rect x="0" y="147" width="46" height="12" fill="#8b5cf6" />
+        <rect x="0" y="159" width="46" height="16" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Sep</text>
+      </g>
+      <!-- Oct -->
+      <g transform="translate(540, 0)">
+        <rect x="0" y="0" width="46" height="64" fill="#f43f5e" />
+        <rect x="0" y="64" width="46" height="34" fill="#3b82f6" />
+        <rect x="0" y="98" width="46" height="28" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="20" fill="#f59e0b" />
+        <rect x="0" y="146" width="46" height="13" fill="#8b5cf6" />
+        <rect x="0" y="159" width="46" height="16" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Oct</text>
+      </g>
+      <!-- Nov -->
+      <g transform="translate(600, 0)">
+        <rect x="0" y="0" width="46" height="67" fill="#f43f5e" />
+        <rect x="0" y="67" width="46" height="33" fill="#3b82f6" />
+        <rect x="0" y="100" width="46" height="26" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="20" fill="#f59e0b" />
+        <rect x="0" y="146" width="46" height="13" fill="#8b5cf6" />
+        <rect x="0" y="159" width="46" height="16" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Nov</text>
+      </g>
+      <!-- Dec -->
+      <g transform="translate(660, 0)">
+        <rect x="0" y="0" width="46" height="71" fill="#f43f5e" />
+        <rect x="0" y="71" width="46" height="31" fill="#3b82f6" />
+        <rect x="0" y="102" width="46" height="24" fill="#10b981" />
+        <rect x="0" y="126" width="46" height="20" fill="#f59e0b" />
+        <rect x="0" y="146" width="46" height="13" fill="#8b5cf6" />
+        <rect x="0" y="159" width="46" height="16" fill="#06b6d4" />
+        <text x="23" y="190" fill="#94a3b8" font-size="10" text-anchor="middle">Dec</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM ROW ================= -->
+
+  <!-- [Visual 4] Bottom-Left Line Chart: Total Monthly Sales over datum -->
+  <g transform="translate(24, 400)" filter="url(#shadow)">
+    <rect width="400" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="30" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Historical Sales Run-Rate (datum)</text>
+    <text x="20" y="48" fill="#94a3b8" font-family="sans-serif" font-size="11">Continuous 70-Month Trajectory (2014 - 2019)</text>
+
+    <!-- Chart path -->
+    <path d="M 40 210 Q 80 180 120 195 T 180 150 T 240 160 T 300 120 T 360 135" fill="none" stroke="#10b981" stroke-width="3" />
+    <!-- Gradient Fill under curve -->
+    <path d="M 40 210 Q 80 180 120 195 T 180 150 T 240 160 T 300 120 T 360 135 L 360 240 L 40 240 Z" fill="#10b981" opacity="0.1" />
+
+    <line x1="40" y1="240" x2="360" y2="240" stroke="#475569" stroke-width="1" />
+    <text x="40" y="260" fill="#94a3b8" font-size="10">2014-01</text>
+    <text x="140" y="260" fill="#94a3b8" font-size="10">2015-06</text>
+    <text x="240" y="260" fill="#94a3b8" font-size="10">2017-01</text>
+    <text x="340" y="260" fill="#94a3b8" font-size="10">2019-10</text>
+    <text x="20" y="282" fill="#10b981" font-size="11" font-weight="600">▲ Steady Long-Term Portfolio CAGR: +6.4%</text>
+  </g>
+
+  <!-- [Visual 5] Bottom-Center Donut Chart: Sales Share by Drug -->
+  <g transform="translate(444, 400)" filter="url(#shadow)">
+    <rect width="360" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="30" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Sales Share by Drug Class</text>
+    <text x="20" y="48" fill="#94a3b8" font-family="sans-serif" font-size="11">Aggregate Revenue Contribution %</text>
+
+    <!-- Donut Segments (Simulated) -->
+    <g transform="translate(130, 155)">
+      <!-- N02BE 42% -->
+      <path d="M 0 -80 A 80 80 0 0 1 76 25 L 43 14 A 45 45 0 0 0 0 -45 Z" fill="#f43f5e" />
+      <!-- M01AE 22% -->
+      <path d="M 76 25 A 80 80 0 0 1 -24 76 L -13 43 A 45 45 0 0 0 43 14 Z" fill="#3b82f6" />
+      <!-- R03 16% -->
+      <path d="M -24 76 A 80 80 0 0 1 -78 -18 L -44 -10 A 45 45 0 0 0 -13 43 Z" fill="#10b981" />
+      <!-- M01AB 10% -->
+      <path d="M -78 -18 A 80 80 0 0 1 -50 -62 L -28 -35 A 45 45 0 0 0 -44 -10 Z" fill="#f59e0b" />
+      <!-- Others 10% -->
+      <path d="M -50 -62 A 80 80 0 0 1 0 -80 L 0 -45 A 45 45 0 0 0 -28 -35 Z" fill="#8b5cf6" />
+      
+      <!-- Center Label -->
+      <text x="0" y="-4" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">57</text>
+      <text x="0" y="14" fill="#94a3b8" font-size="10" text-anchor="middle">BRANDS</text>
+    </g>
+
+    <!-- Donut Legend -->
+    <g transform="translate(230, 95)" font-size="11" font-family="sans-serif">
+      <circle cx="6" cy="6" r="5" fill="#f43f5e" /><text x="18" y="10" fill="#e2e8f0" font-weight="600">N02BE (42%)</text>
+      <circle cx="6" cy="30" r="5" fill="#3b82f6" /><text x="18" y="34" fill="#e2e8f0" font-weight="600">M01AE (22%)</text>
+      <circle cx="6" cy="54" r="5" fill="#10b981" /><text x="18" y="58" fill="#e2e8f0" font-weight="600">R03 (16%)</text>
+      <circle cx="6" cy="78" r="5" fill="#f59e0b" /><text x="18" y="82" fill="#e2e8f0" font-weight="600">M01AB (10%)</text>
+      <circle cx="6" cy="102" r="5" fill="#8b5cf6" /><text x="18" y="106" fill="#e2e8f0" font-weight="600">Other 4 (10%)</text>
+    </g>
+    
+    <text x="20" y="280" fill="#94a3b8" font-size="11">Anilides &amp; NSAIDs account for over 64% of volume</text>
+  </g>
+
+  <!-- [Visual 6] KPI Card (Indicator vs Previous Month Sales Goal) -->
+  <g transform="translate(824, 400)" filter="url(#shadow)">
+    <rect width="210" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="30" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-transform="uppercase">MoM Performance</text>
+    <text x="18" y="70" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="700">9,842.5</text>
+    <text x="18" y="92" fill="#94a3b8" font-size="12">Actual Units (Current Mo.)</text>
+
+    <!-- Goal pill -->
+    <rect x="18" y="115" width="174" height="42" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1" />
+    <text x="30" y="133" fill="#94a3b8" font-size="10">Goal (Prev Mo. Sales):</text>
+    <text x="30" y="149" fill="#10b981" font-size="13" font-weight="700">9,210.0 (+6.86% ▲)</text>
+
+    <!-- Sparkline -->
+    <path d="M 25 210 L 50 205 L 80 220 L 110 190 L 140 195 L 175 175" fill="none" stroke="#10b981" stroke-width="2.5" />
+    <circle cx="175" cy="175" r="4" fill="#10b981" />
+    <text x="18" y="250" fill="#94a3b8" font-size="10">Trendline: MonthlySales.datum</text>
+    <text x="18" y="278" fill="#10b981" font-size="11" font-weight="600">✓ On-Track Target Attainment</text>
+  </g>
+
+  <!-- [Visual 1] Executive Total Monthly Sales Metric Card -->
+  <g transform="translate(1054, 400)" filter="url(#shadow)">
+    <rect width="202" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="30" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-transform="uppercase">Total Monthly Sales</text>
+    
+    <text x="18" y="85" fill="#38bdf8" font-family="sans-serif" font-size="34" font-weight="800">584,231</text>
+    <text x="18" y="110" fill="#94a3b8" font-size="12">Cumulative Units Sold</text>
+    
+    <line x1="18" y1="135" x2="184" y2="135" stroke="#334155" />
+    
+    <text x="18" y="160" fill="#f8fafc" font-size="12" font-weight="600">Period Horizon</text>
+    <text x="18" y="180" fill="#94a3b8" font-size="11">70 Months Total</text>
+
+    <text x="18" y="210" fill="#f8fafc" font-size="12" font-weight="600">Top Performing Class</text>
+    <text x="18" y="230" fill="#f43f5e" font-size="12" font-weight="700">N02BE (245,377 units)</text>
+
+    <rect x="18" y="252" width="166" height="24" rx="4" fill="#0369a1" opacity="0.3" />
+    <text x="28" y="268" fill="#38bdf8" font-size="11" font-weight="600">Enterprise Verified DAX</text>
+  </g>
+
+</svg>

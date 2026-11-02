@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGrad)" />
+
+  <!-- Navigation Header -->
+  <rect x="0" y="0" width="1280" height="64" fill="#0b1120" />
+  <circle cx="36" cy="32" r="14" fill="#3b82f6" />
+  <path d="M30 32 L34 36 L43 27" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <text x="62" y="38" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">PharmaPulse™ Enterprise</text>
+  <text x="310" y="37" fill="#64748b" font-family="sans-serif" font-size="14">|</text>
+  <rect x="330" y="20" width="150" height="26" rx="13" fill="#1e293b" />
+  <text x="345" y="37" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="600">PAGE 3: Daily Insights</text>
+
+  <rect x="860" y="18" width="390" height="28" rx="6" fill="#1e293b" />
+  <text x="875" y="36" fill="#94a3b8" font-family="sans-serif" font-size="12">Diurnal Operations: 2,106 Days • Hourly Rx Breakdown</text>
+
+  <!-- ================= TOP ROW ================= -->
+
+  <!-- [Visual 1] Pivot Heatmap: Weekday Name x Hour Matrix -->
+  <g transform="translate(24, 80)" filter="url(#shadow)">
+    <rect width="400" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Hourly Operating Peak Matrix</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Total Daily Sales by Weekday Name vs Hour of Day</text>
+
+    <!-- Heatmap Grid -->
+    <g transform="translate(65, 75)" font-family="sans-serif" font-size="9">
+      <!-- Hour Headers -->
+      <text x="20" y="-8" fill="#94a3b8" text-anchor="middle">08:00</text>
+      <text x="65" y="-8" fill="#94a3b8" text-anchor="middle">11:00</text>
+      <text x="110" y="-8" fill="#94a3b8" text-anchor="middle">14:00</text>
+      <text x="155" y="-8" fill="#94a3b8" text-anchor="middle">17:00</text>
+      <text x="200" y="-8" fill="#94a3b8" text-anchor="middle">19:00</text>
+      <text x="245" y="-8" fill="#94a3b8" text-anchor="middle">21:00</text>
+
+      <!-- Monday -->
+      <text x="-10" y="16" fill="#94a3b8" text-anchor="end">Mon</text>
+      <rect x="0" y="0" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="45" y="0" width="40" height="22" rx="3" fill="#2563eb" /><rect x="90" y="0" width="40" height="22" rx="3" fill="#3b82f6" /><rect x="135" y="0" width="40" height="22" rx="3" fill="#60a5fa" /><rect x="180" y="0" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="225" y="0" width="40" height="22" rx="3" fill="#1e3a8a" />
+      
+      <!-- Tuesday -->
+      <text x="-10" y="42" fill="#94a3b8" text-anchor="end">Tue</text>
+      <rect x="0" y="26" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="45" y="26" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="90" y="26" width="40" height="22" rx="3" fill="#3b82f6" /><rect x="135" y="26" width="40" height="22" rx="3" fill="#3b82f6" /><rect x="180" y="26" width="40" height="22" rx="3" fill="#2563eb" /><rect x="225" y="26" width="40" height="22" rx="3" fill="#1e3a8a" />
+
+      <!-- Wednesday -->
+      <text x="-10" y="68" fill="#94a3b8" text-anchor="end">Wed</text>
+      <rect x="0" y="52" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="45" y="52" width="40" height="22" rx="3" fill="#2563eb" /><rect x="90" y="52" width="40" height="22" rx="3" fill="#60a5fa" /><rect x="135" y="52" width="40" height="22" rx="3" fill="#93c5fd" /><rect x="180" y="52" width="40" height="22" rx="3" fill="#2563eb" /><rect x="225" y="52" width="40" height="22" rx="3" fill="#1e3a8a" />
+
+      <!-- Thursday -->
+      <text x="-10" y="94" fill="#94a3b8" text-anchor="end">Thu</text>
+      <rect x="0" y="78" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="45" y="78" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="90" y="78" width="40" height="22" rx="3" fill="#3b82f6" /><rect x="135" y="78" width="40" height="22" rx="3" fill="#60a5fa" /><rect x="180" y="78" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="225" y="78" width="40" height="22" rx="3" fill="#1e3a8a" />
+
+      <!-- Friday -->
+      <text x="-10" y="120" fill="#94a3b8" text-anchor="end">Fri</text>
+      <rect x="0" y="104" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="45" y="104" width="40" height="22" rx="3" fill="#3b82f6" /><rect x="90" y="104" width="40" height="22" rx="3" fill="#93c5fd" /><rect x="135" y="104" width="40" height="22" rx="3" fill="#bfdbfe" /><rect x="180" y="104" width="40" height="22" rx="3" fill="#60a5fa" /><rect x="225" y="104" width="40" height="22" rx="3" fill="#1d4ed8" />
+
+      <!-- Saturday -->
+      <text x="-10" y="146" fill="#94a3b8" text-anchor="end">Sat</text>
+      <rect x="0" y="130" width="40" height="22" rx="3" fill="#2563eb" /><rect x="45" y="130" width="40" height="22" rx="3" fill="#60a5fa" /><rect x="90" y="130" width="40" height="22" rx="3" fill="#bfdbfe" /><rect x="135" y="130" width="40" height="22" rx="3" fill="#3b82f6" /><rect x="180" y="130" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="225" y="130" width="40" height="22" rx="3" fill="#1e3a8a" />
+
+      <!-- Sunday -->
+      <text x="-10" y="172" fill="#94a3b8" text-anchor="end">Sun</text>
+      <rect x="0" y="156" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="45" y="156" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="90" y="156" width="40" height="22" rx="3" fill="#1d4ed8" /><rect x="135" y="156" width="40" height="22" rx="3" fill="#1e3a8a" /><rect x="180" y="156" width="40" height="22" rx="3" fill="#0f172a" /><rect x="225" y="156" width="40" height="22" rx="3" fill="#0f172a" />
+    </g>
+
+    <text x="20" y="280" fill="#38bdf8" font-size="11" font-weight="600">Peak Surge: Friday 17:00 &amp; Saturday 11:00 - 14:00</text>
+  </g>
+
+  <!-- [Visual 3] AI Decomposition Tree -->
+  <g transform="translate(444, 80)" filter="url(#shadow)">
+    <rect width="520" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">AI Decomposition Tree: Root Cause Driver</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Decomposing Total Daily Sales by Hour → Weekday Name</text>
+
+    <!-- Decomposition Tree Nodes -->
+    <g transform="translate(20, 75)" font-family="sans-serif">
+      <!-- Root Node -->
+      <rect x="0" y="70" width="110" height="45" rx="6" fill="#0284c7" />
+      <text x="10" y="88" fill="#ffffff" font-size="11" font-weight="700">Total Daily Sales</text>
+      <text x="10" y="104" fill="#e0f2fe" font-size="13" font-weight="800">584,231</text>
+
+      <!-- Level 1 Branch (Hour) -->
+      <line x1="110" y1="92" x2="160" y2="40" stroke="#0284c7" stroke-width="2" />
+      <line x1="110" y1="92" x2="160" y2="92" stroke="#0284c7" stroke-width="2" />
+      <line x1="110" y1="92" x2="160" y2="145" stroke="#0284c7" stroke-width="2" />
+
+      <!-- Nodes Hour -->
+      <rect x="160" y="20" width="130" height="40" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="170" y="36" fill="#94a3b8" font-size="10">Hour: 17:00 (Rush)</text>
+      <text x="170" y="52" fill="#ffffff" font-size="12" font-weight="700">98,240 (16.8%)</text>
+
+      <rect x="160" y="72" width="130" height="40" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="170" y="88" fill="#94a3b8" font-size="10">Hour: 11:00 (Mid-Day)</text>
+      <text x="170" y="104" fill="#ffffff" font-size="12" font-weight="700">89,112 (15.3%)</text>
+
+      <rect x="160" y="125" width="130" height="40" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="170" y="141" fill="#94a3b8" font-size="10">Hour: 14:00 (Afternoon)</text>
+      <text x="170" y="157" fill="#ffffff" font-size="12" font-weight="700">76,430 (13.1%)</text>
+
+      <!-- Level 2 Branch (Weekday Name) -->
+      <line x1="290" y1="40" x2="340" y2="25" stroke="#3b82f6" stroke-width="2" />
+      <line x1="290" y1="40" x2="340" y2="55" stroke="#3b82f6" stroke-width="2" />
+
+      <rect x="340" y="10" width="140" height="30" rx="5" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <text x="350" y="28" fill="#10b981" font-size="10" font-weight="700">Friday (24,110)</text>
+
+      <rect x="340" y="45" width="140" height="30" rx="5" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <text x="350" y="63" fill="#10b981" font-size="10" font-weight="700">Saturday (21,800)</text>
+    </g>
+    <text x="20" y="280" fill="#10b981" font-size="11" font-weight="600">Cognitive AI: 45.2% of retail volume concentrated in 3 peak daily hours</text>
+  </g>
+
+  <!-- [Visual 5] Ribbon Chart: Therapeutic Ranking Shifts -->
+  <g transform="translate(984, 80)" filter="url(#shadow)">
+    <rect width="272" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="18" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Category Ranking Stability</text>
+    <text x="18" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Ribbon Chart: Rank shift across years</text>
+
+    <!-- Ribbons -->
+    <g transform="translate(18, 75)">
+      <!-- Rank 1 Ribbon (N02BE) -->
+      <path d="M 0 20 Q 60 20 110 20 T 230 20 L 230 45 L 0 45 Z" fill="#f43f5e" opacity="0.9" />
+      <text x="10" y="35" fill="#ffffff" font-size="10" font-weight="700">Rank #1: N02BE (Constant)</text>
+
+      <!-- Rank 2 Ribbon (M01AE) -->
+      <path d="M 0 55 Q 60 55 110 60 T 230 55 L 230 78 L 0 78 Z" fill="#3b82f6" opacity="0.9" />
+      <text x="10" y="70" fill="#ffffff" font-size="10" font-weight="700">Rank #2: M01AE (Constant)</text>
+
+      <!-- Rank 3 Ribbon (R03) -->
+      <path d="M 0 90 Q 60 95 110 90 T 230 92 L 230 112 L 0 112 Z" fill="#10b981" opacity="0.9" />
+      <text x="10" y="104" fill="#ffffff" font-size="10" font-weight="700">Rank #3: R03 (Winter surge)</text>
+
+      <!-- Rank 4 Ribbon (M01AB) -->
+      <path d="M 0 125 Q 60 120 110 130 T 230 125 L 230 142 L 0 142 Z" fill="#f59e0b" opacity="0.9" />
+      <text x="10" y="137" fill="#ffffff" font-size="10" font-weight="700">Rank #4: M01AB</text>
+
+      <!-- Rank 5 Ribbon (N02BA) -->
+      <path d="M 0 155 Q 60 160 110 155 T 230 158 L 230 172 L 0 172 Z" fill="#8b5cf6" opacity="0.9" />
+      <text x="10" y="167" fill="#ffffff" font-size="10" font-weight="700">Rank #5: N02BA</text>
+    </g>
+    <text x="18" y="280" fill="#94a3b8" font-size="11">Zero rank churn among Top 3 therapeutic tiers</text>
+  </g>
+
+  <!-- ================= BOTTOM ROW ================= -->
+
+  <!-- [Visual 2] Donut Chart: Daily Sales Share by Drug Class -->
+  <g transform="translate(24, 400)" filter="url(#shadow)">
+    <rect width="360" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="30" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Daily Sales Share by Drug Class</text>
+    <text x="20" y="48" fill="#94a3b8" font-family="sans-serif" font-size="11">Point-of-Sale (POS) Prescription Breakdown</text>
+
+    <g transform="translate(130, 155)">
+      <circle cx="0" cy="0" r="70" fill="#f43f5e" />
+      <path d="M 0 0 L 70 0 A 70 70 0 0 1 18 67 Z" fill="#3b82f6" />
+      <path d="M 0 0 L 18 67 A 70 70 0 0 1 -51 47 Z" fill="#10b981" />
+      <path d="M 0 0 L -51 47 A 70 70 0 0 1 -69 -11 Z" fill="#f59e0b" />
+      <path d="M 0 0 L -69 -11 A 70 70 0 0 1 0 -70 Z" fill="#8b5cf6" />
+      <circle cx="0" cy="0" r="40" fill="#1e293b" />
+      <text x="0" y="5" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle">DAILY</text>
+    </g>
+
+    <g transform="translate(225, 95)" font-size="11" font-family="sans-serif">
+      <circle cx="6" cy="6" r="5" fill="#f43f5e" /><text x="18" y="10" fill="#e2e8f0">N02BE (42.1%)</text>
+      <circle cx="6" cy="30" r="5" fill="#3b82f6" /><text x="18" y="34" fill="#e2e8f0">M01AE (21.8%)</text>
+      <circle cx="6" cy="54" r="5" fill="#10b981" /><text x="18" y="58" fill="#e2e8f0">R03 (15.5%)</text>
+      <circle cx="6" cy="78" r="5" fill="#f59e0b" /><text x="18" y="82" fill="#e2e8f0">M01AB (9.8%)</text>
+      <circle cx="6" cy="102" r="5" fill="#8b5cf6" /><text x="18" y="106" fill="#e2e8f0">N02BA (5.0%)</text>
+    </g>
+    <text x="20" y="280" fill="#94a3b8" font-size="11">Daily proportions mimic macro weekly patterns</text>
+  </g>
+
+  <!-- [Visual 4] Multi-Attribute Slicer Container -->
+  <g transform="translate(404, 400)" filter="url(#shadow)">
+    <rect width="250" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="30" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="600">Cross-Filter Slicers</text>
+    <text x="20" y="46" fill="#94a3b8" font-size="10">Interactive Dimension Filtering</text>
+
+    <!-- Year Filter -->
+    <text x="20" y="75" fill="#38bdf8" font-size="11" font-weight="600">DateTable.Year</text>
+    <g transform="translate(20, 85)" font-size="11">
+      <rect x="0" y="0" width="45" height="22" rx="4" fill="#0284c7" /><text x="22" y="15" fill="#ffffff" text-anchor="middle">All</text>
+      <rect x="50" y="0" width="45" height="22" rx="4" fill="#0f172a" stroke="#334155" /><text x="72" y="15" fill="#94a3b8" text-anchor="middle">2017</text>
+      <rect x="100" y="0" width="45" height="22" rx="4" fill="#0f172a" stroke="#334155" /><text x="122" y="15" fill="#94a3b8" text-anchor="middle">2018</text>
+      <rect x="150" y="0" width="45" height="22" rx="4" fill="#0f172a" stroke="#334155" /><text x="172" y="15" fill="#94a3b8" text-anchor="middle">2019</text>
+    </g>
+
+    <!-- Month Filter -->
+    <text x="20" y="135" fill="#38bdf8" font-size="11" font-weight="600">DateTable.Month</text>
+    <rect x="20" y="145" width="205" height="26" rx="4" fill="#0f172a" stroke="#334155" />
+    <text x="30" y="162" fill="#e2e8f0" font-size="11">All Months (12 Selected) ▼</text>
+
+    <!-- Weekday Filter -->
+    <text x="20" y="195" fill="#38bdf8" font-size="11" font-weight="600">DailySales.Weekday Name</text>
+    <g transform="translate(20, 205)" font-size="10">
+      <rect x="0" y="0" width="60" height="20" rx="3" fill="#10b981" /><text x="30" y="14" fill="#ffffff" text-anchor="middle">✓ Friday</text>
+      <rect x="68" y="0" width="65" height="20" rx="3" fill="#10b981" /><text x="100" y="14" fill="#ffffff" text-anchor="middle">✓ Saturday</text>
+      <rect x="140" y="0" width="65" height="20" rx="3" fill="#0f172a" stroke="#334155" /><text x="172" y="14" fill="#94a3b8" text-anchor="middle">Sunday</text>
+    </g>
+
+    <rect x="20" y="255" width="205" height="22" rx="4" fill="#334155" />
+    <text x="122" y="270" fill="#ffffff" font-size="10" font-weight="600" text-anchor="middle">Reset All Filters (Clear)</text>
+  </g>
+
+  <!-- [Visual 6] Scatter Plot: Correlation of Daily Sales -->
+  <g transform="translate(674, 400)" filter="url(#shadow)">
+    <rect width="582" height="295" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="30" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Multi-Variate Correlation Scatter Plot</text>
+    <text x="20" y="48" fill="#94a3b8" font-family="sans-serif" font-size="11">Sum(DailySales.Year) [X] vs Total Daily Sales [Y] plotted across daily timestamps</text>
+
+    <!-- Scatter Points -->
+    <g transform="translate(45, 65)">
+      <line x1="0" y1="0" x2="0" y2="170" stroke="#475569" />
+      <line x1="0" y1="170" x2="500" y2="170" stroke="#475569" />
+      
+      <!-- Cluster dots -->
+      <circle cx="50" cy="120" r="4" fill="#38bdf8" opacity="0.6" /><circle cx="70" cy="140" r="3" fill="#38bdf8" opacity="0.6" /><circle cx="90" cy="110" r="5" fill="#38bdf8" opacity="0.7" /><circle cx="120" cy="100" r="4" fill="#38bdf8" opacity="0.6" /><circle cx="150" cy="130" r="3" fill="#38bdf8" opacity="0.6" /><circle cx="180" cy="90" r="5" fill="#38bdf8" opacity="0.7" /><circle cx="210" cy="115" r="4" fill="#38bdf8" opacity="0.6" /><circle cx="250" cy="80" r="6" fill="#10b981" opacity="0.8" /><circle cx="280" cy="105" r="4" fill="#38bdf8" opacity="0.6" /><circle cx="310" cy="70" r="6" fill="#10b981" opacity="0.8" /><circle cx="340" cy="95" r="4" fill="#38bdf8" opacity="0.6" /><circle cx="380" cy="65" r="7" fill="#f43f5e" opacity="0.85" /><circle cx="410" cy="85" r="5" fill="#38bdf8" opacity="0.7" /><circle cx="450" cy="55" r="8" fill="#f43f5e" opacity="0.9" /><circle cx="480" cy="60" r="7" fill="#f43f5e" opacity="0.85" />
+      
+      <!-- Regression Trendline -->
+      <line x1="30" y1="140" x2="490" y2="55" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" />
+
+      <text x="250" y="195" fill="#94a3b8" font-size="10" text-anchor="middle">Sum(DailySales.Year) Scale</text>
+      <text x="-10" y="85" fill="#94a3b8" font-size="10" transform="rotate(-90, -10, 85)" text-anchor="middle">Total Daily Sales</text>
+    </g>
+    <text x="20" y="280" fill="#f59e0b" font-size="11" font-weight="600">Positive Volume Elasticity: High-Year cohorts show +28% larger peak transactions</text>
+  </g>
+
+</svg>

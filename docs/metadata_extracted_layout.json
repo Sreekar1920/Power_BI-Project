@@ -1,0 +1,432 @@
+[
+  {
+    "page_num": 1,
+    "title": "Monthly Trends",
+    "name": "1d711a3f4bc927878de3",
+    "width": 1280,
+    "height": 720,
+    "visuals": [
+      {
+        "index": 1,
+        "type": "card",
+        "title": "",
+        "projections": {
+          "Values": [
+            "MonthlySales.Total Monthly Sales"
+          ]
+        },
+        "position": {
+          "x": 1048.3740096149015,
+          "y": 440.4817501130672,
+          "width": 231.90472202214443,
+          "height": 279.9323271746596,
+          "z": 0
+        }
+      },
+      {
+        "index": 2,
+        "type": "lineClusteredColumnComboChart",
+        "title": "",
+        "projections": {
+          "Category": [
+            "DateTable.Date.Variation.Date Hierarchy.Year",
+            "DateTable.Date.Variation.Date Hierarchy.Quarter",
+            "DateTable.Date.Variation.Date Hierarchy.Month",
+            "DateTable.Date.Variation.Date Hierarchy.Day"
+          ],
+          "Y": [
+            "MonthlySales.Total Monthly Sales"
+          ]
+        },
+        "position": {
+          "x": 0,
+          "y": 0,
+          "width": 428.5714285714286,
+          "height": 368.5714285714286,
+          "z": 1000
+        }
+      },
+      {
+        "index": 3,
+        "type": "hundredPercentStackedColumnChart",
+        "title": "Sales by drug class",
+        "projections": {
+          "Category": [
+            "DateTable.Month"
+          ],
+          "Y": [
+            "Sum(MonthlySales.M01AB)",
+            "Sum(MonthlySales.M01AE)",
+            "Sum(MonthlySales.N02BA)",
+            "Sum(MonthlySales.N02BE)",
+            "Sum(MonthlySales.N05B)",
+            "Sum(MonthlySales.N05C)",
+            "Sum(MonthlySales.R03)",
+            "Sum(MonthlySales.R06)"
+          ]
+        },
+        "position": {
+          "x": 407.14285714285717,
+          "y": 0,
+          "width": 872.8571428571429,
+          "height": 414.28571428571433,
+          "z": 2000
+        }
+      },
+      {
+        "index": 4,
+        "type": "lineChart",
+        "title": "",
+        "projections": {
+          "Y": [
+            "MonthlySales.Total Monthly Sales"
+          ],
+          "Category": [
+            "MonthlySales.datum"
+          ]
+        },
+        "position": {
+          "x": 0,
+          "y": 408.5714285714286,
+          "width": 428.5714285714286,
+          "height": 311.42857142857144,
+          "z": 3000
+        }
+      },
+      {
+        "index": 5,
+        "type": "donutChart",
+        "title": "Sales share by drug",
+        "projections": {
+          "Y": [
+            "Sum(MonthlySales.M01AB)",
+            "Sum(MonthlySales.M01AE)",
+            "Sum(MonthlySales.N02BA)",
+            "Sum(MonthlySales.N02BE)",
+            "Sum(MonthlySales.N05B)",
+            "Sum(MonthlySales.N05C)",
+            "Sum(MonthlySales.R03)",
+            "Sum(MonthlySales.R06)"
+          ]
+        },
+        "position": {
+          "x": 428.5714285714286,
+          "y": 430,
+          "width": 425.7142857142857,
+          "height": 290,
+          "z": 4000
+        }
+      },
+      {
+        "index": 6,
+        "type": "kpi",
+        "title": "",
+        "projections": {
+          "Indicator": [
+            "MonthlySales.Total Monthly Sales"
+          ],
+          "Goal": [
+            "DateTable.Previous Month Sales"
+          ],
+          "TrendLine": [
+            "MonthlySales.datum"
+          ]
+        },
+        "position": {
+          "x": 854.2857142857143,
+          "y": 430,
+          "width": 192.85714285714286,
+          "height": 290,
+          "z": 5000
+        }
+      }
+    ]
+  },
+  {
+    "page_num": 2,
+    "title": "Weekly Trends",
+    "name": "04ac666c11b68397ccec",
+    "width": 1280,
+    "height": 720,
+    "visuals": [
+      {
+        "index": 1,
+        "type": "lineChart",
+        "title": "",
+        "projections": {
+          "Y": [
+            "WeeklySales.Total Weekly Sales"
+          ],
+          "Category": [
+            "WeeklySales.datum"
+          ]
+        },
+        "position": {
+          "x": 9.605521030503024,
+          "y": 0,
+          "width": 629.847736142984,
+          "height": 332.0765841973903,
+          "z": 0
+        }
+      },
+      {
+        "index": 2,
+        "type": "pieChart",
+        "title": "Weekly sales of drugs",
+        "projections": {
+          "Y": [
+            "Sum(WeeklySales.M01AB)",
+            "Sum(WeeklySales.M01AE)",
+            "Sum(WeeklySales.N02BA)",
+            "Sum(WeeklySales.N02BE)",
+            "Sum(WeeklySales.N05B)",
+            "Sum(WeeklySales.N05C)",
+            "Sum(WeeklySales.R03)",
+            "Sum(WeeklySales.R06)"
+          ]
+        },
+        "position": {
+          "x": 10,
+          "y": 342,
+          "width": 332,
+          "height": 332,
+          "z": 1000
+        }
+      },
+      {
+        "index": 3,
+        "type": "card",
+        "title": "",
+        "projections": {
+          "Values": [
+            "WeeklySales.Total Weekly Sales"
+          ]
+        },
+        "position": {
+          "x": 576.3312618301815,
+          "y": 0,
+          "width": 330.7043669073184,
+          "height": 332.0765841973903,
+          "z": 2000
+        }
+      },
+      {
+        "index": 4,
+        "type": "hundredPercentStackedAreaChart",
+        "title": "Drug sales in each week",
+        "projections": {
+          "Y": [
+            "Sum(WeeklySales.M01AB)",
+            "Sum(WeeklySales.M01AE)",
+            "Sum(WeeklySales.N02BA)",
+            "Sum(WeeklySales.N02BE)",
+            "Sum(WeeklySales.N05B)",
+            "Sum(WeeklySales.N05C)",
+            "Sum(WeeklySales.R03)",
+            "Sum(WeeklySales.R06)"
+          ],
+          "Category": [
+            "WeeklySales.datum"
+          ]
+        },
+        "position": {
+          "x": 354.03206083854,
+          "y": 341.68210522789326,
+          "width": 553.0035678989598,
+          "height": 356.77649541868374,
+          "z": 3000
+        }
+      },
+      {
+        "index": 5,
+        "type": "funnel",
+        "title": "Contribution of each drug to the total sales of the drug",
+        "projections": {
+          "Y": [
+            "WeeklySales.Total Weekly Sales",
+            "Sum(WeeklySales.M01AB)",
+            "Sum(WeeklySales.M01AE)",
+            "Sum(WeeklySales.N02BA)",
+            "Sum(WeeklySales.N02BE)",
+            "Sum(WeeklySales.N05B)",
+            "Sum(WeeklySales.N05C)",
+            "Sum(WeeklySales.R03)",
+            "Sum(WeeklySales.R06)"
+          ]
+        },
+        "position": {
+          "x": 948.2021474396556,
+          "y": 0,
+          "width": 332.0765841973903,
+          "height": 332.0765841973903,
+          "z": 4000
+        }
+      },
+      {
+        "index": 6,
+        "type": "gauge",
+        "title": "N02BE drug contribution",
+        "projections": {
+          "MinValue": [
+            "Sum(WeeklySales.M01AB)"
+          ],
+          "Y": [
+            "Sum(WeeklySales.N02BE)"
+          ],
+          "MaxValue": [
+            "WeeklySales.Total Weekly Sales"
+          ]
+        },
+        "position": {
+          "x": 948.2021474396556,
+          "y": 388.3374930903365,
+          "width": 332.0765841973903,
+          "height": 332.0765841973903,
+          "z": 5000
+        }
+      }
+    ]
+  },
+  {
+    "page_num": 3,
+    "title": "Daily Insights",
+    "name": "ae0a41bbcfd0a9f6b2ab",
+    "width": 1280,
+    "height": 720,
+    "visuals": [
+      {
+        "index": 1,
+        "type": "pivotTable",
+        "title": "",
+        "projections": {
+          "Rows": [
+            "DailySales.Weekday Name"
+          ],
+          "Values": [
+            "DailySales.Total Daily Sales"
+          ],
+          "Columns": [
+            "DailySales.Hour"
+          ]
+        },
+        "position": {
+          "x": 9.605521030503024,
+          "y": 0,
+          "width": 373.2431028995461,
+          "height": 215.43811454128212,
+          "z": 0
+        }
+      },
+      {
+        "index": 2,
+        "type": "donutChart",
+        "title": "Daily Sales Share by Drug Class",
+        "projections": {
+          "Y": [
+            "Sum(DailySales.M01AE)",
+            "Sum(DailySales.N02BA)",
+            "Sum(DailySales.N02BE)",
+            "Sum(DailySales.N05B)",
+            "Sum(DailySales.N05C)",
+            "Sum(DailySales.R03)",
+            "Sum(DailySales.R06)",
+            "Sum(DailySales.M01AB)"
+          ]
+        },
+        "position": {
+          "x": 10.227499722561314,
+          "y": 259.09665963821993,
+          "width": 494.32915325713014,
+          "height": 318.75707468649426,
+          "z": 1000
+        }
+      },
+      {
+        "index": 3,
+        "type": "decompositionTreeVisual",
+        "title": "",
+        "projections": {
+          "ExplainBy": [
+            "DailySales.Hour",
+            "DailySales.Weekday Name"
+          ],
+          "Analyze": [
+            "DailySales.Total Daily Sales"
+          ]
+        },
+        "position": {
+          "x": 382.8486239300491,
+          "y": 0,
+          "width": 601.031173051475,
+          "height": 318.3544112966716,
+          "z": 2000
+        }
+      },
+      {
+        "index": 4,
+        "type": "slicer",
+        "title": "",
+        "projections": {
+          "Values": [
+            "DateTable.Year",
+            "DateTable.Month",
+            "DailySales.Weekday Name"
+          ]
+        },
+        "position": {
+          "x": 504.28571428571433,
+          "y": 318.5714285714286,
+          "width": 274.2857142857143,
+          "height": 302.8571428571429,
+          "z": 3000
+        }
+      },
+      {
+        "index": 5,
+        "type": "ribbonChart",
+        "title": "",
+        "projections": {
+          "Category": [
+            "DailySales.datum"
+          ],
+          "Y": [
+            "Sum(DailySales.Year)"
+          ],
+          "Series": [
+            "DailySales.N02BA"
+          ]
+        },
+        "position": {
+          "x": 994,
+          "y": 0,
+          "width": 286,
+          "height": 318,
+          "z": 4000
+        }
+      },
+      {
+        "index": 6,
+        "type": "scatterChart",
+        "title": "",
+        "projections": {
+          "X": [
+            "Sum(DailySales.Year)"
+          ],
+          "Category": [
+            "DailySales.datum"
+          ],
+          "Y": [
+            "DailySales.Total Daily Sales"
+          ]
+        },
+        "position": {
+          "x": 830,
+          "y": 360,
+          "width": 450.00000000000006,
+          "height": 291.42857142857144,
+          "z": 5000
+        }
+      }
+    ]
+  }
+]

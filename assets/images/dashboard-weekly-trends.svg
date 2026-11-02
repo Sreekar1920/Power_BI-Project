@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGrad)" />
+
+  <!-- Navigation Header -->
+  <rect x="0" y="0" width="1280" height="64" fill="#0b1120" />
+  <circle cx="36" cy="32" r="14" fill="#3b82f6" />
+  <path d="M30 32 L34 36 L43 27" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <text x="62" y="38" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">PharmaPulse™ Enterprise</text>
+  <text x="310" y="37" fill="#64748b" font-family="sans-serif" font-size="14">|</text>
+  <rect x="330" y="20" width="150" height="26" rx="13" fill="#1e293b" />
+  <text x="345" y="37" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="600">PAGE 2: Weekly Trends</text>
+
+  <rect x="880" y="18" width="370" height="28" rx="6" fill="#1e293b" />
+  <text x="895" y="36" fill="#94a3b8" font-family="sans-serif" font-size="12">Tactical Granularity: 302 Active Reporting Weeks</text>
+
+  <!-- ================= TOP ROW ================= -->
+
+  <!-- [Visual 1] Line Chart: Total Weekly Sales over time -->
+  <g transform="translate(24, 80)" filter="url(#shadow)">
+    <rect width="550" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Weekly Sales Velocity (datum)</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Continuous tracking of Total Weekly Sales volume fluctuations</text>
+    
+    <!-- Grid -->
+    <line x1="45" y1="80" x2="520" y2="80" stroke="#334155" stroke-dasharray="3,3" />
+    <line x1="45" y1="140" x2="520" y2="140" stroke="#334155" stroke-dasharray="3,3" />
+    <line x1="45" y1="200" x2="520" y2="200" stroke="#334155" stroke-dasharray="3,3" />
+    <line x1="45" y1="240" x2="520" y2="240" stroke="#475569" stroke-width="1" />
+
+    <text x="38" y="84" fill="#64748b" font-size="9" text-anchor="end">3.5K</text>
+    <text x="38" y="144" fill="#64748b" font-size="9" text-anchor="end">2.5K</text>
+    <text x="38" y="204" fill="#64748b" font-size="9" text-anchor="end">1.5K</text>
+
+    <!-- Fluctuating weekly sales line -->
+    <path d="M 50 160 L 80 140 L 110 180 L 140 120 L 170 150 L 200 130 L 230 170 L 260 110 L 290 140 L 320 95 L 350 130 L 380 105 L 410 145 L 440 90 L 470 120 L 500 115" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+
+    <text x="50" y="260" fill="#94a3b8" font-size="10">W01</text>
+    <text x="160" y="260" fill="#94a3b8" font-size="10">W75</text>
+    <text x="270" y="260" fill="#94a3b8" font-size="10">W150</text>
+    <text x="380" y="260" fill="#94a3b8" font-size="10">W225</text>
+    <text x="490" y="260" fill="#94a3b8" font-size="10">W302</text>
+    
+    <text x="20" y="282" fill="#38bdf8" font-size="11" font-weight="600">Mean Weekly Velocity: 1,934 units / week (σ = 284 units)</text>
+  </g>
+
+  <!-- [Visual 3] KPI Metric Card: Total Weekly Sales -->
+  <g transform="translate(594, 80)" filter="url(#shadow)">
+    <rect width="280" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-transform="uppercase">Total Weekly Sales</text>
+    
+    <text x="20" y="85" fill="#10b981" font-family="sans-serif" font-size="36" font-weight="800">584,231</text>
+    <text x="20" y="110" fill="#94a3b8" font-size="12">Total Aggregated Across 302 Weeks</text>
+
+    <line x1="20" y1="135" x2="260" y2="135" stroke="#334155" />
+
+    <text x="20" y="165" fill="#f8fafc" font-size="12" font-weight="600">Peak Volume Recorded</text>
+    <text x="20" y="185" fill="#38bdf8" font-size="13" font-weight="700">3,485 units (Week 51 - Holiday Rush)</text>
+
+    <text x="20" y="220" fill="#f8fafc" font-size="12" font-weight="600">Trough Volume Recorded</text>
+    <text x="20" y="240" fill="#f59e0b" font-size="13" font-weight="700">1,124 units (Week 32 - Mid-Summer)</text>
+
+    <rect x="20" y="260" width="240" height="24" rx="4" fill="#047857" opacity="0.3" />
+    <text x="30" y="276" fill="#10b981" font-size="11" font-weight="600">Strict Model Coherence with Monthly</text>
+  </g>
+
+  <!-- [Visual 5] Contribution Funnel Chart -->
+  <g transform="translate(894, 80)" filter="url(#shadow)">
+    <rect width="362" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Therapeutic Class Funnel</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Contribution of each drug to total portfolio volume</text>
+
+    <!-- Funnel Bars -->
+    <g transform="translate(20, 75)" font-family="sans-serif" font-size="10">
+      <rect x="60" y="0" width="260" height="20" rx="3" fill="#38bdf8" /><text x="50" y="14" fill="#94a3b8" text-anchor="end">TOTAL</text><text x="325" y="14" fill="#ffffff" font-weight="700"> 100%</text>
+      <rect x="60" y="25" width="200" height="18" rx="3" fill="#f43f5e" /><text x="50" y="38" fill="#94a3b8" text-anchor="end">N02BE</text><text x="265" y="38" fill="#ffffff"> 42.0%</text>
+      <rect x="60" y="48" width="130" height="18" rx="3" fill="#3b82f6" /><text x="50" y="61" fill="#94a3b8" text-anchor="end">M01AE</text><text x="195" y="61" fill="#ffffff"> 21.8%</text>
+      <rect x="60" y="71" width="95" height="18" rx="3" fill="#10b981" /><text x="50" y="84" fill="#94a3b8" text-anchor="end">R03</text><text x="160" y="84" fill="#ffffff"> 15.6%</text>
+      <rect x="60" y="94" width="70" height="18" rx="3" fill="#f59e0b" /><text x="50" y="107" fill="#94a3b8" text-anchor="end">M01AB</text><text x="135" y="107" fill="#ffffff"> 9.8%</text>
+      <rect x="60" y="117" width="55" height="18" rx="3" fill="#8b5cf6" /><text x="50" y="130" fill="#94a3b8" text-anchor="end">N02BA</text><text x="120" y="130" fill="#ffffff"> 4.9%</text>
+      <rect x="60" y="140" width="40" height="18" rx="3" fill="#06b6d4" /><text x="50" y="153" fill="#94a3b8" text-anchor="end">N05B</text><text x="105" y="153" fill="#ffffff"> 3.2%</text>
+      <rect x="60" y="163" width="30" height="18" rx="3" fill="#ec4899" /><text x="50" y="176" fill="#94a3b8" text-anchor="end">R06</text><text x="95" y="176" fill="#ffffff"> 1.9%</text>
+      <rect x="60" y="186" width="18" height="18" rx="3" fill="#64748b" /><text x="50" y="199" fill="#94a3b8" text-anchor="end">N05C</text><text x="82" y="199" fill="#ffffff"> 0.8%</text>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM ROW ================= -->
+
+  <!-- [Visual 2] Pie Chart: Weekly sales of drugs -->
+  <g transform="translate(24, 400)" filter="url(#shadow)">
+    <rect width="320" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Weekly Drug Mix</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Categorical share breakdown</text>
+
+    <!-- Simulated Pie -->
+    <g transform="translate(160, 165)">
+      <circle cx="0" cy="0" r="75" fill="#f43f5e" />
+      <!-- Pie slice M01AE 22% -->
+      <path d="M 0 0 L 75 0 A 75 75 0 0 1 20 72 Z" fill="#3b82f6" />
+      <!-- Pie slice R03 16% -->
+      <path d="M 0 0 L 20 72 A 75 75 0 0 1 -55 51 Z" fill="#10b981" />
+      <!-- Pie slice M01AB 10% -->
+      <path d="M 0 0 L -55 51 A 75 75 0 0 1 -74 -12 Z" fill="#f59e0b" />
+      <!-- Pie slice Others -->
+      <path d="M 0 0 L -74 -12 A 75 75 0 0 1 0 -75 Z" fill="#8b5cf6" />
+    </g>
+    <text x="20" y="280" fill="#94a3b8" font-size="11">Paracetamol dominates weekly prescription demand</text>
+  </g>
+
+  <!-- [Visual 4] 100% Stacked Area Chart: Drug sales in each week -->
+  <g transform="translate(364, 400)" filter="url(#shadow)">
+    <rect width="510" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">Drug Sales in Each Week (100% Stacked Area)</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Continuous weekly structural stability across therapy classes</text>
+
+    <!-- Stacked Area Waves -->
+    <g transform="translate(40, 75)">
+      <!-- Bottom Layer (N02BE) -->
+      <path d="M 0 75 Q 110 65 220 80 T 440 70 L 440 180 L 0 180 Z" fill="#f43f5e" opacity="0.8" />
+      <!-- Middle Layer (M01AE) -->
+      <path d="M 0 40 Q 110 35 220 45 T 440 38 L 440 70 L 0 75 Z" fill="#3b82f6" opacity="0.85" />
+      <!-- Top Layer (R03 + Others) -->
+      <path d="M 0 0 L 440 0 L 440 38 L 0 40 Z" fill="#10b981" opacity="0.85" />
+      
+      <line x1="0" y1="180" x2="440" y2="180" stroke="#475569" />
+      <text x="0" y="200" fill="#94a3b8" font-size="10">2014-W01</text>
+      <text x="140" y="200" fill="#94a3b8" font-size="10">2016-W26</text>
+      <text x="280" y="200" fill="#94a3b8" font-size="10">2018-W12</text>
+      <text x="400" y="200" fill="#94a3b8" font-size="10">2019-W42</text>
+    </g>
+    <text x="20" y="280" fill="#38bdf8" font-size="11" font-weight="600">Stable demand distribution; low substitution friction</text>
+  </g>
+
+  <!-- [Visual 6] Gauge Chart: N02BE Drug Contribution -->
+  <g transform="translate(894, 400)" filter="url(#shadow)">
+    <rect width="362" height="300" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="20" y="32" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="600">N02BE Drug Contribution</text>
+    <text x="20" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">Gauge: Min (M01AB) vs Value (N02BE) vs Max (Total Sales)</text>
+
+    <!-- Gauge arc -->
+    <g transform="translate(180, 180)">
+      <!-- Background Track -->
+      <path d="M -110 0 A 110 110 0 0 1 110 0" fill="none" stroke="#334155" stroke-width="24" stroke-linecap="round" />
+      <!-- Value Track (42%) -->
+      <path d="M -110 0 A 110 110 0 0 1 -20 -108" fill="none" stroke="#f43f5e" stroke-width="24" stroke-linecap="round" />
+      
+      <!-- Needle / Target -->
+      <circle cx="0" cy="0" r="10" fill="#ffffff" />
+      <line x1="0" y1="0" x2="-18" y2="-85" stroke="#ffffff" stroke-width="3" />
+
+      <text x="0" y="20" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="700" text-anchor="middle">42.0%</text>
+      <text x="0" y="40" fill="#94a3b8" font-size="11" text-anchor="middle">Actual Contribution Ratio</text>
+    </g>
+
+    <text x="50" y="240" fill="#94a3b8" font-size="10">Min: M01AB (9.8%)</text>
+    <text x="310" y="240" fill="#94a3b8" font-size="10" text-anchor="end">Max: Total (100%)</text>
+
+    <text x="20" y="280" fill="#f43f5e" font-size="11" font-weight="600">★ Critical dependency on Paracetamol supply lines</text>
+  </g>
+
+</svg>
